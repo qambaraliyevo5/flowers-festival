@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+:root {
+  --primary-color: #cb9df0;
+  --secondary-color: #f0c1e1;
+  --yellow-gray: #fddbbb;
+  --yellow: FFF9BF;
+  --text-color: 5F129D;
+}
+*,
+*::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+@layer utilities {
+  .container {
+    @apply max-w-[1440px] w-full px-4 md:px-6 lg:px-10 mx-auto;
+  }
+}
