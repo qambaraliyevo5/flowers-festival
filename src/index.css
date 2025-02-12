@@ -25,3 +25,10 @@ body {
     @apply max-w-[1440px] w-full px-4 md:px-6 lg:px-10 mx-auto;
   }
 }
+
+.footer {
+  background: url(/public/assets/images/lola.png);
+  background-size: cover;
+  /* background-position: 15px 20px; */
+  background-repeat: no-repeat;
+}
