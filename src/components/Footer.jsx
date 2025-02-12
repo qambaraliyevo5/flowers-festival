@@ -7,12 +7,16 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
-// import lola from "../assets/image/lola.png";
+// import ft1 from "../assets/image/ft1.png";
+// import ft2 from "../assets/image/ft2.png";
 
 const Footer = () => {
   return (
-    <footer className="footer text-gray-800 relative">
-      <div className="max-w-7xl mx-auto px-4 py-12">
+    <footer className="footer bg-[#fbefdf] text-gray-800 relative">
+      {/* <img src={ft1} className="absolute bottom-0 left-0 w-3xs z-[1]" alt="" />
+      <img src={ft2} className="absolute top-0 right-0 w-3xs  z-[1]" alt="" /> */}
+
+      <div className="max-w-7xl mx-auto px-4 py-12 z-[2]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Kompaniya haqida */}
           <div className="space-y-4">
@@ -117,7 +121,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-sm hover:text-[#4A2B82] transition-colors"
+                  className="text-sm hover:text-[#4A2B82] transition-colors  z-[1]"
                 >
                   Analytics
                 </a>
@@ -145,7 +149,7 @@ const Footer = () => {
         </div>
 
         {/* Mualliflik huquqi */}
-        <div className="border-t border-[#F0C1E1] mt-12 pt-8">
+        <div className="border-t border-[#000] mt-12 pt-8">
           <p className="text-sm text-center text-gray-800">
             © {new Date().getFullYear()} Kompaniya nomi. Barcha huquqlar
             himoyalangan.

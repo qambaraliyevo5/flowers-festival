@@ -1,5 +1,13 @@
+import CountdownSection from "../section/CountdownSection";
+import ImageCarousel from "../section/ImageCarousel";
+
 function Home() {
-  return <div>Home</div>;
+  return (
+    <>
+      <ImageCarousel />
+      <CountdownSection />
+    </>
+  );
 }
 
 export default Home;
