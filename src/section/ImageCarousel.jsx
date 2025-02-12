@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { images } from "../assets/js/caruselData";
-
+import pattern from "../assets/image/carsuelP.png";
 const ImageCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -19,18 +19,18 @@ const ImageCarousel = () => {
   }, [isAutoPlaying, images.length]);
 
   // Oldingi rasmga o'tish
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
+  //   const prevSlide = () => {
+  //     setCurrentIndex((prevIndex) =>
+  //       prevIndex === 0 ? images.length - 1 : prevIndex - 1
+  //     );
+  //   };
 
-  // Keyingi rasmga o'tish
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+  //   // Keyingi rasmga o'tish
+  //   const nextSlide = () => {
+  //     setCurrentIndex((prevIndex) =>
+  //       prevIndex === images.length - 1 ? 0 : prevIndex + 1
+  //     );
+  //   };
 
   // Dot orqali rasmga o'tish
   const goToSlide = (index) => {
@@ -38,8 +38,18 @@ const ImageCarousel = () => {
   };
 
   return (
-    <section className="my-10">
+    <section className="my-20">
       <div className="relative w-full max-w-5xl mx-auto">
+        <img
+          src={pattern}
+          className="absolute z-10 right-[-50px] w-2xs bottom-[-50px]"
+          alt=""
+        />
+        <img
+          src={pattern}
+          className="absolute z-10 left-[-50px] w-2xs top-[-50px] rotate-180"
+          alt=""
+        />
         {/* Asosiy carousel container */}
         <div className="relative h-96 overflow-hidden rounded-lg">
           {/* Rasmlar wrapper */}
@@ -59,7 +69,7 @@ const ImageCarousel = () => {
           </div>
 
           {/* Chap/o'ng tugmalar */}
-          <button
+          {/* <button
             className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-black/70 transition-colors"
             onClick={prevSlide}
           >
@@ -70,7 +80,7 @@ const ImageCarousel = () => {
             onClick={nextSlide}
           >
             &#10095;
-          </button>
+          </button> */}
 
           {/* Dots navigatsiyasi */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
